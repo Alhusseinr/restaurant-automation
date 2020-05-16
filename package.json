@@ -4,11 +4,15 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "start": "concurrently \" nodemon server.js \" \" cd client & npm run serve \"",
+    "installDep": "concurrently \"npm i \" \" npm run install-client \"",
     "server": "nodemon server.js",
     "install-client": "cd client & npm install",
     "client": "cd client & npm run serve",
     "build": "cd client & npm run build",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "cleardb": "node ./tests/cleardb",
+    "seed": "sequelize db:seed:all"
   },
   "repository": {
     "type": "git",
@@ -22,22 +26,30 @@
   },
   "homepage": "https://github.com/no-vac/restaurant-automation#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
+    "concurrently": "^5.1.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
+    "enhanced-resolve": "^4.1.1",
     "express": "^4.17.1",
+    "express-session": "^1.17.0",
     "jsonwebtoken": "^8.5.1",
+    "knex": "^0.20.13",
     "morgan": "^1.9.1",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
     "pg": "^7.17.1",
     "pg-hstore": "^2.3.3",
-    "path": "^0.12.7",
-    "sequelize": "^5.21.3"
+    "sequelize": "^5.21.5",
+    "sequelize-cli": "^5.5.1",
+    "vue-session": "^1.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.2",
-    "sequelizer": "^1.1.3"
+    "sequelizer": "^1.1.4"
   }
 }

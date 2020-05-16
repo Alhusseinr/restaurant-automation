@@ -1,57 +1,72 @@
-const Table = require("../models").Table;
-const Waiter = require("../models").Waiters;
+const tableServices = require('../services/table/tableServices');
+const menuServices = require('../services/menu/menuServices');
 
 module.exports = {
     create(req, res) {
-        return Table
-            .create({
-                TableNumber: req.body.TableNumber,
-                Orders: req.body.Orders,
-                Total: req.body.Total,
-                waiterId: req.params.waiterId
-            })
-            .then(newTable => {
-                Waiter
-                    .findOne({
-                        where: {
-                            id: req.params.waiterId
-                        }
-                    })
-                    .then(waiter => {
-                        return waiter
-                            .update({
-                                tableId: req.body.TableNumber || waiter.TableNumber,
-                            })
-                            .then(() => res.status(200).json(newTable))
-                            .catch(e => res.status(400).json(e))
-                    })
-                    .catch(e => res.status(400).json(e));
-            })
-            .catch(e => res.status(400).json(e));
-    },
-    list(req, res) {
-        return Table
-            .findAll()
-            .then(tables => res.status(200).json(tables))
-            .catch(e => res.status(400).json(e));
-    },
-    destroy(req, res) {
-        return Table
-            .findOne({
-                where: {
-                    id: req.body.id
-                }
-            }).then(table => {
-                if (!table) {
-                    return res.status(404).json({
-                        message: 'no tables found'
-                    });
-                }
-                return table
-                    .destroy()
-                    .then(() => res.status(200).json({message: 'Deleted successfully'}))
-                    .catch(e => res.status(400).json(e))
+        const { waiterId, orderId, status, total } = req.body;
+
+        return tableServices
+            .createTable(waiterId, orderId, status, total)
+            .then(table => {
+                return res.status(200).json(table)
             })
             .catch(e => res.status(400).json(e))
     },
-}
+    list(req, res) {
+        return tableServices
+            .getTables()
+            .then(tables => {
+                return res.status(200).json(tables)
+            })
+            .catch(e => res.status(400).json(e))
+    },
+    table(req, res) {
+        const { id } = req.params;
+        return tableServices
+            .getTableById(id)
+            .then(table => {
+                menuServices
+                    .getItems()
+                    .then(menu => {
+                        let total = 0;
+                        table.map((order) => {
+                            const items = menu.filter(item => item.id === order.item);
+                            total += +(items[0].price) ;
+                            total = Math.round(total * 100)/100;
+                        });
+                        return res.status(200).json({
+                            tableOrders: table,
+                            tableTotal: total,
+                        })
+
+                    }).catch(e => console.log(e))
+            })
+            .catch(e => {
+                return res.status(400).json(e)
+            })
+    },
+    update(req, res) {
+        const { id, waiterId, orderId, status, total } = req.body;
+
+        return tableServices
+            .updateTable(id, waiterId, orderId, status, total)
+            .then(table => {
+                return res.status(200).json({ table, msg: 'table updated' });
+            })
+            .catch(e => {
+                return res.status(400).json(e);
+            })
+    },
+    destroy(req, res) {
+        const { id } = req.body;
+
+        return tableServices
+            .deleteTable(id)
+            .then(table => {
+                return res.status(200).json({ table, msg: 'table deleted' })
+            })
+            .catch(e => {
+                return res.status(400).json(e);
+            })
+    },
+};
