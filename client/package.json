@@ -1,6 +1,9 @@
 {
   "name": "client",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "engines": {
+    "node": "12.16.x"
+  },
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.9.11",
@@ -30,7 +33,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run npm",
-    "deploy": "gh-pages -d build"
+    "deployGH": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

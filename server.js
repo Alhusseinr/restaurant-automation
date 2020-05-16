@@ -16,7 +16,6 @@ function startServer(server) {
   const { PORT } = process.env;
 
   server.listen(PORT || 5000, () => {
-
     console.log(`Server is live on port ${PORT}`);
   });
 
@@ -29,8 +28,6 @@ function startServer(server) {
 }
 
 async function init() {
-  //grab db from env
-
   const app = express();
 
   app.use(bodyParser.json());
@@ -45,7 +42,7 @@ async function init() {
   });
   app.use(morgan("tiny"));
 
-  app.use(express.static(path.join(__dirname, "/client/dist")));
+  app.use(express.static(path.join(__dirname, "/client/build")));
 
   //init passport
   // app.use(passport.initialize());
