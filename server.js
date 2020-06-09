@@ -13,7 +13,7 @@ require("dotenv").config();
 const router = require("./routers");
 
 function startServer(server) {
-  const { PORT } = process.env;
+  const { PORT } = 5000;
 
   server.listen(PORT || 5000, () => {
     console.log(`Server is live on port ${PORT}`);
