@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "concurrently \" nodemon server.js \" \" cd client & npm run serve \"",
+    "start": "nodemon server.js",
     "installDep": "concurrently \"npm i \" \" npm run install-client \"",
     "server": "nodemon server.js",
     "install-client": "cd client & npm install",
