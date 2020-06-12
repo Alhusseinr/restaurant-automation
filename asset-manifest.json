@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.js": "/restaurant-automation/static/js/main.c159e546.chunk.js",
+    "main.js.map": "/restaurant-automation/static/js/main.c159e546.chunk.js.map",
+    "runtime-main.js": "/restaurant-automation/static/js/runtime-main.2849e0a7.js",
+    "runtime-main.js.map": "/restaurant-automation/static/js/runtime-main.2849e0a7.js.map",
+    "static/js/2.149bcc16.chunk.js": "/restaurant-automation/static/js/2.149bcc16.chunk.js",
+    "static/js/2.149bcc16.chunk.js.map": "/restaurant-automation/static/js/2.149bcc16.chunk.js.map",
+    "index.html": "/restaurant-automation/index.html",
+    "precache-manifest.134020cc53a848089ea740ab7c8cd388.js": "/restaurant-automation/precache-manifest.134020cc53a848089ea740ab7c8cd388.js",
+    "service-worker.js": "/restaurant-automation/service-worker.js",
+    "static/js/2.149bcc16.chunk.js.LICENSE.txt": "/restaurant-automation/static/js/2.149bcc16.chunk.js.LICENSE.txt",
+    "static/media/apple.png": "/restaurant-automation/static/media/apple.8fbb4bcf.png",
+    "static/media/burger.png": "/restaurant-automation/static/media/burger.9779bc91.png",
+    "static/media/caesarSalad.jpg": "/restaurant-automation/static/media/caesarSalad.93c0bb82.jpg",
+    "static/media/carrot.jpg": "/restaurant-automation/static/media/carrot.e8c3cda9.jpg",
+    "static/media/chicken.jpeg": "/restaurant-automation/static/media/chicken.5fc04d2c.jpeg",
+    "static/media/chickenNoodle.png": "/restaurant-automation/static/media/chickenNoodle.549d027d.png",
+    "static/media/chocolate.jpg": "/restaurant-automation/static/media/chocolate.ce30300e.jpg",
+    "static/media/coffee.png": "/restaurant-automation/static/media/coffee.6530de65.png",
+    "static/media/fries.jpg": "/restaurant-automation/static/media/fries.ef075b80.jpg",
+    "static/media/houseSalad.png": "/restaurant-automation/static/media/houseSalad.9ffd0355.png",
+    "static/media/iceCream.jpg": "/restaurant-automation/static/media/iceCream.52b928e2.jpg",
+    "static/media/icedTea.jpeg": "/restaurant-automation/static/media/icedTea.e0e1c568.jpeg",
+    "static/media/mozzarella.webp": "/restaurant-automation/static/media/mozzarella.812c1a9c.webp",
+    "static/media/nachos.jpg": "/restaurant-automation/static/media/nachos.9fae0672.jpg",
+    "static/media/onionSoup.png": "/restaurant-automation/static/media/onionSoup.0ef61814.png",
+    "static/media/red.png": "/restaurant-automation/static/media/red.59427aa2.png",
+    "static/media/soda.jpeg": "/restaurant-automation/static/media/soda.838ea4a5.jpeg",
+    "static/media/spaghetti.png": "/restaurant-automation/static/media/spaghetti.11fcfa21.png",
+    "static/media/steak.png": "/restaurant-automation/static/media/steak.1e0083f6.png",
+    "static/media/tea.jpeg": "/restaurant-automation/static/media/tea.1dd9a5b0.jpeg",
+    "static/media/veggieSoup.jpeg": "/restaurant-automation/static/media/veggieSoup.865d4976.jpeg",
+    "static/media/veggies.png": "/restaurant-automation/static/media/veggies.12cffd59.png",
+    "static/media/water.jpeg": "/restaurant-automation/static/media/water.104b13ea.jpeg",
+    "static/media/wings.jpeg": "/restaurant-automation/static/media/wings.ce5fe31b.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2849e0a7.js",
+    "static/js/2.149bcc16.chunk.js",
+    "static/js/main.c159e546.chunk.js"
+  ]
+}
