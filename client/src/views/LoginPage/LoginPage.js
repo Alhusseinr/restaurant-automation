@@ -51,7 +51,7 @@ class SignInSide extends React.Component{
     }
 
     login = (username, password) => {
-        fetch('ec2-52-14-173-191.us-east-2.compute.amazonaws.com/api/u/login', {
+        fetch('http://ec2-52-14-173-191.us-east-2.compute.amazonaws.com/api/u/login', {
             method: 'POST',
             body: JSON.stringify({
                 password, username
@@ -68,7 +68,7 @@ class SignInSide extends React.Component{
     };
 
     register = (username, password, email)  => {
-        fetch('ec2-52-14-173-191.us-east-2.compute.amazonaws.com/api/u/', {
+        fetch('http://ec2-52-14-173-191.us-east-2.compute.amazonaws.com/api/u/', {
             method: 'POST',
             body: JSON.stringify({
                 username, password, email
