@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/restaurant-automation/static/js/main.f25d822a.chunk.js",
-    "main.js.map": "/restaurant-automation/static/js/main.f25d822a.chunk.js.map",
+    "main.js": "/restaurant-automation/static/js/main.4bf3a4be.chunk.js",
+    "main.js.map": "/restaurant-automation/static/js/main.4bf3a4be.chunk.js.map",
     "runtime-main.js": "/restaurant-automation/static/js/runtime-main.2849e0a7.js",
     "runtime-main.js.map": "/restaurant-automation/static/js/runtime-main.2849e0a7.js.map",
     "static/js/2.149bcc16.chunk.js": "/restaurant-automation/static/js/2.149bcc16.chunk.js",
     "static/js/2.149bcc16.chunk.js.map": "/restaurant-automation/static/js/2.149bcc16.chunk.js.map",
     "index.html": "/restaurant-automation/index.html",
-    "precache-manifest.e1bd0b932fdef0aa61d8e122054a20b8.js": "/restaurant-automation/precache-manifest.e1bd0b932fdef0aa61d8e122054a20b8.js",
+    "precache-manifest.5d06e5b7f491a5fe7f9ad85e19a4b26b.js": "/restaurant-automation/precache-manifest.5d06e5b7f491a5fe7f9ad85e19a4b26b.js",
     "service-worker.js": "/restaurant-automation/service-worker.js",
     "static/js/2.149bcc16.chunk.js.LICENSE.txt": "/restaurant-automation/static/js/2.149bcc16.chunk.js.LICENSE.txt",
     "static/media/apple.png": "/restaurant-automation/static/media/apple.8fbb4bcf.png",
@@ -38,6 +38,6 @@
   "entrypoints": [
     "static/js/runtime-main.2849e0a7.js",
     "static/js/2.149bcc16.chunk.js",
-    "static/js/main.f25d822a.chunk.js"
+    "static/js/main.4bf3a4be.chunk.js"
   ]
 }
