@@ -9,6 +9,8 @@ import {connect} from "react-redux";
 import withStyles from "@material-ui/core/styles/withStyles";
 import propTypes from 'prop-types';
 
+const URI = 'http://ec2-52-14-173-191.us-east-2.compute.amazonaws.com:5000';
+
 
 const useStyles = (theme) => ({
     root: {
@@ -51,7 +53,7 @@ class SignInSide extends React.Component{
     }
 
     login = (username, password) => {
-        fetch('http://ec2-52-14-173-191.us-east-2.compute.amazonaws.com/api/u/login', {
+        fetch(URI+'/api/u/login', {
             method: 'POST',
             body: JSON.stringify({
                 password, username
@@ -68,7 +70,7 @@ class SignInSide extends React.Component{
     };
 
     register = (username, password, email)  => {
-        fetch('http://ec2-52-14-173-191.us-east-2.compute.amazonaws.com/api/u/', {
+        fetch(URI+'/api/u', {
             method: 'POST',
             body: JSON.stringify({
                 username, password, email
