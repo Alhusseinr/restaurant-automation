@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "821e3e1f5827cf1096956318c94d0435",
+    "revision": "a5c33643c0a9d07447ebf3fba96ed4b7",
     "url": "/restaurant-automation/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/restaurant-automation/static/js/2.149bcc16.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f15a0110ef6b0a7766cf",
-    "url": "/restaurant-automation/static/js/main.9848619d.chunk.js"
+    "revision": "a087785175c3739467c8",
+    "url": "/restaurant-automation/static/js/main.f25d822a.chunk.js"
   },
   {
     "revision": "1c9219e1564abef7a051",
